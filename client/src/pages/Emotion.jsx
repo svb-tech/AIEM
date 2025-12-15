@@ -4,7 +4,7 @@ import EmotionResult, { getDominantEmotion } from '../components/EmotionResult';
 import MusicPlayer from '../components/MusicPlayer';
 import { useAuth } from '../context/AuthContext';
 import './Emotion.css';
-import Navbar from './navbar';
+import Navbar from './Navbar';
 
 const Emotion = () => {
   const [currentEmotion, setCurrentEmotion] = useState(null);
