@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useAuth } from "../context/AuthContext";
 import "./SignupPage.css";
-import Navbar from "./navbar";
+import Navbar from "./Navbar";
 export default function SignupPage() {
   const { register, loading, error } = useAuth();
 

@@ -1,7 +1,7 @@
 // src/pages/Home.js
 import React from "react";
 import { Link } from "react-router-dom";
-import Navbar from "../pages/navbar"; 
+import Navbar from "../pages/Navbar"; 
 import "./Home.css";
 
 const Home = () => {

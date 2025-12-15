@@ -1,6 +1,6 @@
 import { useState,useEffect } from "react";
 import { useAuth } from "../context/AuthContext";
-import Navbar from "./navbar";
+import Navbar from "./Navbar";
 import { useNavigate } from "react-router-dom";
 export default function Login() {
   const { login, logout, user, loading, error } = useAuth();

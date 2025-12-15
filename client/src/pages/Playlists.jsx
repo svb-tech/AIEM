@@ -237,7 +237,7 @@
 
 import React, { useState, useEffect } from "react";
 import "./Playlists.css";
-import Navbar from "./navbar";
+import Navbar from "./Navbar";
 import { playlistService } from "../services/playlistService";
 import { useAuth } from "../context/AuthContext"; // Path adjust karo
 
