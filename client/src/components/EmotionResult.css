@@ -1,0 +1,103 @@
+.emotion-result {
+  background: rgba(224, 32, 32, 0.1); /* ✅ 10% white transparency */
+  backdrop-filter: blur(5px); /* ✅ Background blur effect */
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: none;
+  margin: 20px 0;
+}
+
+.emotion-result h3 {
+  margin: 0 0 20px 0;
+  color: #000000;
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: 600;
+}
+
+.no-emotion {
+  text-align: center;
+  color: #000000;
+  font-style: italic;
+  padding: 40px 20px;
+}
+
+.dominant-emotion {
+  text-align: center;
+  margin-bottom: 30px;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.emotion-badge {
+  display: inline-block;
+  padding: 10px 20px;
+  color: white;
+  font-size: 1.2em;
+  font-weight: bold;
+  border-radius: 25px;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.confidence {
+  font-size: 1.1em;
+  color: #666;
+  font-weight: bold;
+}
+
+.emotion-breakdown h4 {
+  margin: 0 0 15px 0;
+  color: #000000;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 8px;
+}
+
+.emotion-bar-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  gap: 15px;
+}
+
+.emotion-label {
+  width: 100px;
+  font-weight: bold;
+  color:white;
+  text-transform: capitalize;
+}
+
+.emotion-bar-wrapper {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.emotion-bar {
+  height: 20px;
+  border-radius: 10px;
+  transition: width 0.3s ease;
+  min-width: 0%;
+}
+
+.emotion-value {
+  width: 50px;
+  text-align: right;
+  font-size: 0.9em;
+  color: #666;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .emotion-bar-container {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+  
+  .emotion-label {
+    width: auto;
+  }
+}

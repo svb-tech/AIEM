@@ -1,0 +1,129 @@
+/* ===========================
+    WEBcam Container
+=========================== */
+.webcam-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px auto;
+  width: 640px; /* match video width */
+}
+
+.video-wrapper {
+  position: relative;  /* canvas over video */
+  width: 640px;
+  height: 480px;
+}
+
+.webcam-video,
+.emotion-canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+
+/* ===========================
+    BUTTONS — Clean & Polished
+=========================== */
+.control-btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  transition: all 0.25s ease;
+  
+}
+
+/* ENABLED BUTTON (Start & Stop same style) */
+.start-btn:not(:disabled),
+.stop-btn:not(:disabled) {
+  background-color: #02a102;   /* Fresh Green */
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 128, 0, 0.25);
+  border-radius:10px;
+  font-size:20px;
+  gap:5px;
+}
+
+/* Hover only when enabled */
+.control-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0, 128, 0, 0.35);
+   border-radius:10px;
+   font-size:20px;
+}
+
+/* DISABLED BUTTON */
+.start-btn:disabled,
+.stop-btn:disabled {
+  background-color: #c46c6c; /* Soft red */
+  color: white;
+  cursor: not-allowed;
+  opacity: 0.7;
+  box-shadow: none;
+   border-radius:10px;
+   font-size:20px;
+   gap:5px;
+}
+
+/* ===========================
+         VIDEO WRAPPER
+=========================== */
+.video-wrapper {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
+
+.webcam-video {
+  width: 640px;
+  height: 480px;
+  transform: scaleX(-1);
+  object-fit: cover;
+}
+
+.emotion-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+/* ===========================
+       Loading Text
+=========================== */
+.loading-message {
+  padding: 20px;
+  font-size: 18px;
+  color: #666;
+  text-align: center;
+}
+
+/* ===========================
+        RESPONSIVE
+=========================== */
+@media (max-width: 768px) {
+  .webcam-video {
+    width: 100%;
+    max-width: 400px;
+    height: 300px;
+  }
+  
+  .video-wrapper {
+    width: 100%;
+    max-width: 400px;
+  }
+}
+.button-group {
+  display: flex;
+  gap: 10px; /* This will create space between Start & Stop buttons */
+  justify-content: center; /* optional: center them horizontally */
+  margin-top: 10px;
+}

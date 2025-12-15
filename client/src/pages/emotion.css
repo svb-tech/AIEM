@@ -1,0 +1,185 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: url("/bg.jpg") no-repeat center/cover;
+  min-height: 100vh;
+}
+
+
+.emotion-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding-top: 80px; 
+  /* FIX: navbar ke neeche space */
+}
+
+
+
+.emotion-header {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.emotion-header h1 {
+  color: #333;
+  margin-bottom: 10px;
+  font-size: 2.5rem;
+}
+
+.emotion-header p {
+  color: #666;
+  font-size: 1.1rem;
+}
+
+.emotion-main {
+  flex: 1;
+  padding: 20px;
+}
+
+
+/* ⭐ FIXED EQUAL HEIGHT GRID */
+.emotion-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  max-width: 1400px;
+  margin: 0 auto;
+  align-items: stretch;
+  height: 100%;
+}
+
+/* ⭐ EQUAL HEIGHT PANELS */
+.left-panel,
+.right-panel {
+  padding: 20px;
+  border-radius: 12px;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  
+  /* Remove all background styling */
+  background: transparent;
+  backdrop-filter: none;
+  box-shadow: none;
+  
+  /* Force equal height */
+  height: 100%;
+  flex: 1;
+}
+
+/* Ensure content within panels also stretches */
+.left-panel > *,
+.right-panel > * {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Media player styling */
+.media-player-wrapper {
+  width: 100%;
+  max-width: 1400px;
+  margin: 20px auto 0;
+  padding: 20px;
+  border-radius: 12px;
+  background: transparent;
+  backdrop-filter: none;
+  box-shadow: none;
+}
+
+.emotion-footer {
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: auto;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .emotion-container {
+    grid-template-columns: 1fr;
+  }
+
+  .left-panel,
+  .right-panel {
+    min-height: auto;
+    height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .emotion-header h1 {
+    font-size: 2rem;
+  }
+  
+  .emotion-header p {
+    font-size: 1rem;
+  }
+  
+  .emotion-main {
+    padding: 15px;
+  }
+  
+  .left-panel,
+  .right-panel {
+    padding: 15px;
+    min-height: 400px;
+  }
+}
+
+/*no login */
+
+.login {
+  
+  text-align: center;
+  padding: 20px;
+    margin: 130px auto 40px;
+  max-width: 400px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  color: #333;
+  font-family: sans-serif;
+}
+
+.login p {
+  margin: 10px 0;
+  font-size: 1em;
+}
+
+.login a {
+
+  margin: 5px 10px;
+  padding: 8px 15px;
+  text-decoration: none;
+  color: white;
+  border-radius: 5px;
+  font-size: 0.9em;
+}
+
+.login a.Login {
+  background-color: #007bff;
+}
+
+.login a.signup {
+  background-color: #28a745;
+}
+
+.login ul {
+  text-align: left;
+  margin: 10px auto 0;
+  padding-left: 20px;
+}
+
+.login li {
+  margin-bottom: 5px;
+}
+

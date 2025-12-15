@@ -1,0 +1,211 @@
+/* ========== RESET ========== */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --primary: #667eea;
+  --primary2: #764ba2;
+  --gradient: linear-gradient(135deg, #667eea, #764ba2);
+  --light: #f5f6ff;
+  --text: #222;
+  --subtext: #666;
+  --success: #2ecc71;
+  --danger: #ff4444;
+}
+
+body {
+  background: url("/bg.jpg") center/cover fixed no-repeat;
+}
+
+/* ========== MAIN WRAPPER (GLASS CARD) ========== */
+.playlist-page {
+  max-width: 1200px;
+  margin: 130px auto 40px;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(18px);
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+/* Page Heading */
+h1 {
+  text-align: center;
+  font-size: 2.3rem;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 25px;
+}
+
+/* ========== EMOTION SELECT BOX ========== */
+.emotion-box {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px 20px;
+  background: rgba(255,255,255,0.3);
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.4);
+  margin-bottom: 20px;
+}
+
+.emotion-box select {
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: 2px solid var(--primary);
+  background: white;
+}
+
+/* ========== SEARCH BOX ========== */
+.search-box {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.search-box input {
+  flex: 1;
+  padding: 12px 15px;
+  border-radius: 10px;
+  border: 1.5px solid #ddd;
+}
+
+.search-box button {
+  padding: 12px 25px;
+  background: var(--gradient);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+}
+.search-box button:hover{
+  cursor:pointer;
+}
+
+/* ========== SEARCH RESULTS GRID ========== */
+.results {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  /* background-color: #2ecc71; */
+  margin-bottom:20px;
+}
+
+/* Result Card */
+.result-card {
+  background: white;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid #eee;
+}
+
+.thumb {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.info {
+  padding: 12px;
+}
+
+.info h4 {
+  font-size: 1rem;
+  height: 40px;
+  overflow: hidden;
+}
+
+.add-btn {
+  width: 100%;
+  padding: 12px;
+  background: var(--success);
+  color: white;
+  border: none;
+  font-weight: bold;
+}
+
+/* ========== EMOTION PLAYLIST TABLE ========== */
+
+h2 {
+  text-align: center;
+  margin: 35px 0 15px;
+}
+
+.emotion-section {
+  background: white;
+  border-radius: 14px;
+  margin-bottom: 35px;
+  overflow-y:auto;
+  max-height:400px;
+  padding-right: 2px;
+}
+
+.emotion-header {
+  padding: 15px 20px;
+  background: var(--gradient);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+}
+
+.playlist-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.playlist-table th,
+.playlist-table td {
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.table-thumbnail {
+  width: 110px;
+  height: 65px;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.table-info h4 {
+  font-size: 1rem;
+}
+
+.table-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.watch-btn,
+.remove-btn {
+  padding: 8px 12px;
+  color: white;
+  font-size: 0.85rem;
+  border-radius: 6px;
+  text-decoration: none;
+  border: none;
+}
+
+.watch-btn { background: var(--primary); }
+.remove-btn { background: var(--danger); }
+
+/* Empty Playlist */
+.empty-playlist {
+  padding: 40px;
+  text-align: center;
+  color: #777;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+  .playlist-page { margin: 20px; padding: 20px; }
+  .emotion-box { flex-direction: column; align-items: flex-start; }
+  .search-box { flex-direction: column; }
+  .search-box button { width: 100%; }
+}
+
+/* for scroling */
+
+/* .playlists-container{
+  overflow-y: auto;
+  max-height: 70vh;
+  padding-right:10px ;
+} */
