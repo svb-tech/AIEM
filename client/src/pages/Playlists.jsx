@@ -28,7 +28,7 @@
 //   const [results, setResults] = useState([]);
 //   const [loading, setLoading] = useState(false);
 
-//   const API_KEY = "AIzaSyC65mkaclFemriNMOlG3459ajvARi3D_78";
+//   const API_KEY = "YourApi";
 
 //   const searchYouTube = async () => {
 //     console.log(query);
